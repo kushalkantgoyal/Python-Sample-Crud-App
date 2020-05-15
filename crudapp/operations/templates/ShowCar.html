@@ -1,0 +1,36 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD App</title>
+</head>
+<body>
+
+    <div>
+        <style>
+            table, th, td {
+              border: 1px solid black;
+            }
+        </style>
+
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Price</td>
+            </tr>
+
+            {% for car in cars %}
+                <tr>
+                    <td>{{car.id}}</td>
+                    <td>{{car.name}}</td>
+                    <td>{{car.price}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+</body>
+</html>
